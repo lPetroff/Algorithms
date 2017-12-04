@@ -1,0 +1,30 @@
+
+
+    #include <stdio.h>
+    #include <time.h>
+    #define a 15
+    int main(){
+clock_t tic = clock();
+int i,j,k,swap;
+int array[a]={3,7,5,4,11,21,33,55,44,15,18,88,76,9,1};
+  printf("önce:");
+  for(i=0;i<a;i++){
+  printf("%d ",array[i]);
+  }
+  for(j=0;j<a;j++){
+  for(k=0;k<a;k++){
+   if(array[k]>array[k+1]){
+   swap=array[k];
+   array[k]=array[k+1];
+   array[k+1]=swap;
+}
+} 
+}
+printf("\nsonra:");
+  for(i=0;i<a;i++){
+  printf("%d ",array[i]);
+}
+clock_t toc = clock();
+printf("\nElapsed: %f seconds\n", (double)(toc - tic) / CLOCKS_PER_SEC);
+}
+//Ş.F.Y
